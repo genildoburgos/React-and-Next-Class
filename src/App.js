@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Componentes from './Componentes/Component/Componentes.jsx';
+import Count from './Componentes/Component/Count.jsx';
+import NewCount from './Componentes/Component/new.jsx';
+import IndexCss from './Componentes/Component/index.jsx';
+import Form from './Componentes/form/index.jsx';
+
 
 function App() {
+
+  const [submittedDats, set]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Componentes />
+        <Count valorInicial = {1} valor = {1}/>
+        <NewCount  valorInicial = {10} valor = {10}/>
+        <IndexCss />
+        <Form />
     </div>
+    
   );
 }
 
