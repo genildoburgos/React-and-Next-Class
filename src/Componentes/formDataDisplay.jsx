@@ -1,6 +1,6 @@
 import React from "react";
 
-const formDataDisplay = ({formData}) =>{
+const FormDataDisplay = ({formData}) =>{
 
     return(
         <div>
@@ -11,4 +11,4 @@ const formDataDisplay = ({formData}) =>{
     )
 }
 
-export default formDataDisplay;
+export default FormDataDisplay;

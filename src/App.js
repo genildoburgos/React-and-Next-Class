@@ -4,11 +4,16 @@ import Count from './Componentes/Component/Count.jsx';
 import NewCount from './Componentes/Component/new.jsx';
 import IndexCss from './Componentes/Component/index.jsx';
 import Form from './Componentes/form/index.jsx';
-
+import { useState } from 'react';
+import FormDataDisplay from './Componentes/formDataDisplay.jsx';
 
 function App() {
 
-  const [submittedDats, set]
+  const [submittedData, setSubmittedData]= useState();
+
+  const handleFormSubmit = (formData) =>{
+    setSubmittedData(formData)
+  }
 
   return (
     <div className="App">
@@ -16,7 +21,9 @@ function App() {
         <Count valorInicial = {1} valor = {1}/>
         <NewCount  valorInicial = {10} valor = {10}/>
         <IndexCss />
-        <Form />
+        <Form onSubimit={handleFormSubmit}/>
+        {submittedData && <FormDataDisplay formData={submittedData} /> }
+        
     </div>
     
   );
